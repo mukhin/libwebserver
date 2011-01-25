@@ -1,0 +1,20 @@
+libwebserver - a high performance embeddable webserver for C++ backends
+
+What it can do?
+* handle simple HTTP requests
+* handle sync and async HTTP requests
+* respond with small text/data packets
+* perform time-dependent actions (like built-in cron)
+* collect statistics on itself for monitoring purposes (traffic in/out, requests in/out, sustained/attained rates, latency, etc.)
+* everything may be mixed according to our needs
+
+Building libwebserver - External dependencies
+* SCons
+* TBB (Intel Threading Building Blocks)
+* log4cpp
+
+TODO
+1. Simplify `helloworld`.
+2. Write down a couple of examples of async request handling (ideas wanted).
+3. Write or unhide comments/READMEs for libraries, included by dependencies (lib/* except `base` and `webserver`).
+4. Cut unused code.
