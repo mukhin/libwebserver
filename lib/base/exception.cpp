@@ -46,8 +46,9 @@ const std::string BaseException::why() const {
 }
 
 
-const char* BaseException::what() const throw() {
-  return (message() + " from " + where() + ": " + why()).c_str();
+const char* BaseException::what() throw() {
+  what_complex_ = message() + " from " + where() + ": " + why();
+  return what_complex_.c_str();
 }
 
 

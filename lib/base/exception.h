@@ -59,13 +59,14 @@ public:
    * @return C++ string with the human-readable ASCII representation
    * of the exception.
    */
-  const char* what() const throw();
+  const char* what() throw();
 
 protected:
   BaseException(const BaseException& src);
   BaseException& operator=(const BaseException& src) ;
 
   std::string what_; // The type of exception
+  std::string what_complex_; // The full info of exception
   const char*  file_; // The file name where exception occured
   size_t line_; // The line number where exception occured
 };
